@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/member_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_fg"
+    android:padding="@dimen/double_padding">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/profile_image_size"
+            android:layout_height="@dimen/profile_image_size"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/single_padding"
+            android:background="@color/primary_fg"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/single_margin">
+            <TextView
+                android:id="@+id/realname"
+                style="@style/H1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amy Adams"
+                android:padding="@dimen/single_padding"
+                android:fontFamily="roboto"/>
+            <TextView
+                android:id="@+id/username"
+                style="@style/H2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="amy"
+                android:paddingTop="@dimen/single_padding"
+                android:paddingLeft="@dimen/single_padding"
+                android:paddingRight="@dimen/single_padding"
+                android:textStyle="normal"
+                android:fontFamily="roboto"/>
+            <TextView
+                android:id="@+id/title"
+                style="@style/H2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marketing"
+                android:paddingLeft="@dimen/single_padding"
+                android:paddingRight="@dimen/single_padding"
+                android:fontFamily="roboto"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginTop="@dimen/double_padding"
+        android:paddingLeft="@dimen/double_padding"
+        android:paddingBottom="@dimen/half_padding">
+
+        <TableRow android:id="@+id/email_row"
+            android:padding="@dimen/single_padding"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:onClick="onClickEmail">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_email"
+                android:padding="@dimen/half_padding"/>
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:padding="@dimen/half_padding"
+                android:text="janet.sun@gmail.com"/>
+        </TableRow>
+        <TableRow android:id="@+id/phone_row"
+            android:paddingLeft="@dimen/single_padding"
+            android:paddingRight="@dimen/single_padding"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:onClick="onClickPhone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/half_padding"
+                android:src="@drawable/ic_phone"/>
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:padding="@dimen/half_padding"
+                android:text="415-5559463"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/skype_row"
+            android:paddingLeft="@dimen/single_padding"
+            android:paddingRight="@dimen/single_padding"
+            android:paddingBottom="@dimen/single_padding"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/half_padding"
+                android:src="@drawable/ic_skype"/>
+
+            <TextView
+                android:id="@+id/skype_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:padding="@dimen/half_padding"
+                android:text="manlao.river"
+                />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

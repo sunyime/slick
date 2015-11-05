@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme colors -->
+    <color name="primary_bg">#F24235</color>
+    <color name="primary_bg_dark">#76201A</color>
+    <color name="primary_fg">#4d6470</color>
+
+    <color name="light_grey">#504E4E4E</color>
+    <color name="h1_text_color">#FF4D4D4D</color>
+    <color name="h2_text_color">#FF808080</color>
+</resources>

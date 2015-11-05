@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/single_padding"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/half_padding"
+        android:paddingBottom="@dimen/single_padding"
+        android:paddingLeft="@dimen/single_padding"
+        android:paddingRight="@dimen/single_padding">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/profile_thumbnail_size"
+            android:layout_height="@dimen/profile_thumbnail_size"
+            android:background="@color/primary_fg"
+            android:layout_gravity="left|center_vertical"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/double_padding"
+            android:paddingRight="@dimen/double_padding"
+            android:paddingTop="@dimen/single_padding"
+            android:paddingBottom="@dimen/double_padding">
+            <TextView
+                android:id="@+id/realname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:ellipsize="marquee"
+                android:text="Amy Adams"
+                android:layout_gravity="center"
+                android:gravity="left|center_vertical"
+                style="@style/ListH1"/>
+
+            <!-- TODO: add more fields here -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:padding="0dp"
+        />
+</LinearLayout>

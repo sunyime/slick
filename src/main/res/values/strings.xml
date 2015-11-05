@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Slick</string>
+    <string name="title_activity_member_list">Slickers</string>
+    <string name="title_activity_member_detail">Slicker Detail</string>
+
+    <string name="action_about">About</string>
+    <string name="title_about">About Slick</string>
+    <string name="info_about">Slick is a coding sample for Slack. Hope you like it!</string>
+
+    <string name="default_email_subject">Sent from Slick</string>
+</resources>
