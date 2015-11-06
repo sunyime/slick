@@ -44,7 +44,7 @@ public class MemberImageLoader {
         private Context mContext;
         private Member  mMember;
         private ImageView mImageView;
-
+        private boolean mIsThumbnail;
         /**
          * Constructor
          * For loading image from the cached file
@@ -61,10 +61,11 @@ public class MemberImageLoader {
          * @param member
          * @param imageView
          */
-        public LoaderTarget(Context context, Member member, ImageView imageView) {
+        public LoaderTarget(Context context, Member member, ImageView imageView, boolean isThumbNail) {
             mContext = context;
             mMember = member;
             mImageView = imageView;
+            mIsThumbnail = isThumbNail;
         }
 
         /**
@@ -96,7 +97,7 @@ public class MemberImageLoader {
 
             // Cache network images to disk
             if (source == Picasso.LoadedFrom.NETWORK) {
-                File file = mMember.getImageCacheFile(mContext);
+                File file = mIsThumbnail ? mMember.getThumbnailCacheFile(mContext) : mMember.getImageCacheFile(mContext);
                 FileOutputStream os = null;
 
                 try {

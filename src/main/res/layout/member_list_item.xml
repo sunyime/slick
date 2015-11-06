@@ -10,10 +10,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/half_padding"
-        android:paddingBottom="@dimen/single_padding"
         android:paddingLeft="@dimen/single_padding"
-        android:paddingRight="@dimen/single_padding">
+        android:paddingRight="@dimen/single_padding"
+        android:paddingBottom="@dimen/double_padding">
         <ImageView
             android:id="@+id/thumbnail"
             android:layout_width="@dimen/profile_thumbnail_size"
@@ -29,7 +28,6 @@
             android:gravity="right|center_vertical"
             android:paddingLeft="@dimen/double_padding"
             android:paddingRight="@dimen/double_padding"
-            android:paddingTop="@dimen/single_padding"
             android:paddingBottom="@dimen/double_padding">
             <TextView
                 android:id="@+id/realname"
@@ -37,12 +35,12 @@
                 android:layout_height="wrap_content"
                 android:lines="2"
                 android:ellipsize="marquee"
-                android:text="Amy Adams"
+                android:text="Some One"
                 android:layout_gravity="center"
                 android:gravity="left|center_vertical"
                 style="@style/ListH1"/>
 
-            <!-- TODO: add more fields here -->
+            <!-- TODO: add more fields here (show state icons for is_admin, etc -->
         </LinearLayout>
     </LinearLayout>
 

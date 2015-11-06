@@ -9,7 +9,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.janetisawesome.slick.async.MemberImageLoader;
@@ -64,8 +66,7 @@ public class MemberDetailActivity extends AppCompatActivity {
         Target t;
         // Populate the profile image from Network and save to file cache
         if (NetworkHelper.isNetworkConnected(this)) {
-            Log.d(TAG, "Loading image " + mMember.getImageUri(this));
-            t = new MemberImageLoader.LoaderTarget(this, mMember, imageView);
+            t = new MemberImageLoader.LoaderTarget(this, mMember, imageView, false);
 
             Picasso.with(this)
                     .load(mMember.getImageUri(this))
@@ -73,6 +74,7 @@ public class MemberDetailActivity extends AppCompatActivity {
         }
         // Load the image from File cache
         else {
+            Log.d(TAG, "Loading image " + mMember.getImageCacheFile(this));
             t = new MemberImageLoader.LoaderTarget(imageView);
             Picasso.with(this)
                     .load(mMember.getImageCacheFile(this))

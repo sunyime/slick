@@ -69,9 +69,7 @@
         <TableRow android:id="@+id/email_row"
             android:padding="@dimen/single_padding"
             android:layout_gravity="fill_horizontal"
-            android:gravity="left"
-            android:onClick="onClickEmail">
-
+            android:gravity="left">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,14 +82,14 @@
                 android:layout_gravity="left"
                 android:gravity="left"
                 android:padding="@dimen/half_padding"
-                android:text="janet.sun@gmail.com"/>
+                android:text="janet.sun@gmail.com"
+                android:autoLink="email"/>
         </TableRow>
         <TableRow android:id="@+id/phone_row"
             android:paddingLeft="@dimen/single_padding"
             android:paddingRight="@dimen/single_padding"
             android:layout_gravity="fill_horizontal"
-            android:gravity="left"
-            android:onClick="onClickPhone">
+            android:gravity="left">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,7 +102,8 @@
                 android:layout_gravity="left"
                 android:gravity="left"
                 android:padding="@dimen/half_padding"
-                android:text="415-5559463"/>
+                android:text="415-5559463"
+                android:autoLink="phone"/>
         </TableRow>
         <TableRow
             android:id="@+id/skype_row"

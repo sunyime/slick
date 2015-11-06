@@ -22,8 +22,8 @@ public class Member {
     private String color;
     private Profile profile;
 
-    private transient File cacheFile;
-
+    private transient File thumbnailCacheFile;
+    private transient File imageCacheFile;
     // Public Methods
     public Member() {}
 
@@ -63,6 +63,7 @@ public class Member {
      * URI string to the thumbnail image
      */
     public String getThumbnailUri(Context context) {
+        //TODO: check screen resolution & choose image(but we don't have the right images)
         return profile.image_72;
     }
 
@@ -78,10 +79,10 @@ public class Member {
 
 
     public File getThumbnailCacheFile(Context context) {
-        if (cacheFile == null) {
-            cacheFile = new File(FileHelper.getImageCacheDir(context), getUserName() + "_th.png");
+        if (thumbnailCacheFile == null) {
+            thumbnailCacheFile = new File(FileHelper.getImageCacheDir(context), getUserName() + "_th.png");
         }
-        return cacheFile;
+        return thumbnailCacheFile;
     }
 
     /**
@@ -91,6 +92,7 @@ public class Member {
      * URI string to the large image
      */
     public String getImageUri(Context context) {
+        //TODO: check screen resolution & choose image (but we don't have the right images)
         return this.profile.image_192;
     }
 
@@ -104,10 +106,10 @@ public class Member {
     }
 
     public File getImageCacheFile(Context context) {
-        if (cacheFile == null) {
-            cacheFile = new File(FileHelper.getImageCacheDir(context), getUserName() + ".png");
+        if (imageCacheFile == null) {
+            imageCacheFile = new File(FileHelper.getImageCacheDir(context), getUserName() + ".png");
         }
-        return cacheFile;
+        return imageCacheFile;
     }
 
 }

@@ -96,8 +96,7 @@ public class MemberListActivity extends AppCompatActivity implements MemberListL
 
             // Load the image from Network and save to file cache
             if (NetworkHelper.isNetworkConnected(mContext)) {
-                Log.d(TAG, "Loading image " + member.getThumbnailUri(mContext));
-                t = new MemberImageLoader.LoaderTarget(mContext, member, holder.mImgView);
+                t = new MemberImageLoader.LoaderTarget(mContext, member, holder.mImgView, true);
                 holder.mImgView.setTag(t);
 
                 Picasso.with(mContext)
@@ -106,11 +105,12 @@ public class MemberListActivity extends AppCompatActivity implements MemberListL
             }
             // Load the image from File cache
             else {
+                Log.d(TAG, "Loading image " + member.getThumbnailCacheFile(mContext));
                 t = new MemberImageLoader.LoaderTarget(holder.mImgView);
                 holder.mImgView.setTag(t);
 
                 Picasso.with(mContext)
-                        .load(member.getThumbnailCacheUri(mContext))
+                        .load(member.getThumbnailCacheFile(mContext))
                         .into(t);
             }
 

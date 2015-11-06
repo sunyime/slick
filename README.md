@@ -3,14 +3,11 @@ README for Slick, a coding exercise for Slack
 
 Build Instructions
 ==================
-1. setup the android build environment
-
-2. Build the debug version (no certs)
+1. Build the debug version (no certs)
 ./gradlew assembleDebug
 
-3. Install the output
-adb install -r build/outputs/apk/Slick-debug.apk
-
+2. Install the output
+adb install -r build/outputs/apk/Slick-1.0-debug.apk
 
 The exercise
 =============
@@ -42,13 +39,25 @@ views - MemberDetailActivity, MemberListActivity
 tasks - MemberImageLoader, MemberListLoader
 utils - AndroidHelper, FileHelper, PrefsHelper 
 
+
 3rd Party Library Choices:
 ==========================
 Gson - for JSON treatment. Though not as fast as Jackson, Gson has a very easy to use API that allows serialization/deserialization
 Picasso - Image loading library that handles async loading and saving to file
 
 
+Known Issue
+================
+Member images aren’t properly scaled for the screen resolution.
+(because I opted for pretty sizes vs. sharp images). 
 
+Solution: make more sizes available. 
+Thumbnail (48dp) in xxxhdpi is image_192, xxhdpi is 144px, xhdpi is 96px, etc
+Profile Image (192dp) in xxxhdpi is 768 px, etc) 
+
+Member
+getThumbnailUri(Context context) 
+getImageUri(Context context) 
 
 
 
